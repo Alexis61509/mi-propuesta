@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>¿Te quieres casar conmigo?</title>
+  <style>
+    body {
+      background-color: #a64ca6;
+      color: white;
+      text-align: center;
+      margin-top: 100px;
+      font-family: sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #yesBtn,
+    #noBtn {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #yesBtn {
+      background-color: #ffffff;
+      color: #a64ca6;
+    }
+
+    #noBtn {
+      background-color: #ffffff;
+      color: #a64ca6;
+      position: absolute;
+    }
+
+    /* Estilo para corazones */
+    .corazon {
+      position: fixed;
+      color: pink;
+      font-size: 24px;
+      animation: caer 4s linear forwards;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    @keyframes caer {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 id="pregunta">¿Quieres casarte conmigo?</h1>
+  <p id="message"></p>
+  <button id="yesBtn">Sí</button>
+  <button id="noBtn">No</button>
+
+  <!-- Audio oculto que se activa al hacer clic -->
+  <audio
+    id="audio"
+    src="https://www.bensound.com/bensound-music/bensound-romantic.mp3"
+  ></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
